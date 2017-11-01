@@ -1,6 +1,5 @@
 const hapi = require("hapi");
-
-const routes = require("./routes");
+const api = require("./api");
 
 const server = new hapi.Server();
 
@@ -11,12 +10,19 @@ server.connection({
   router: { stripTrailingSlash: true }
 });
 
-server.route(routes);
-
-server.start(err => {
-  if (err) {
-    return console.log(err);
-  } else {
-    console.log(server.info.uri);
+server.register(
+  [
+    {
+      register: api
+    }
+  ],
+  () => {
+    server.start(err => {
+      if (err) {
+        return console.log(err);
+      } else {
+        console.log(server.info.uri);
+      }
+    });
   }
-});
+);
