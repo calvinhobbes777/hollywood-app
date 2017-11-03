@@ -12,7 +12,7 @@ import {
   CreateMovie,
   CreateActor
 } from "./views";
-
+//importing all our files
 class Router extends Component {
   render() {
     return (
@@ -31,6 +31,6 @@ class Router extends Component {
       </BrowserRouter>
     );
   }
-}
+} //making our routes
 
 export default Router;

@@ -1,4 +1,5 @@
-const baseUrl = (path = "") => `http://localhost:7070/api/actors/${path}`;
+const baseUrl = (path = "") =>
+  `https://hollywood-api-calvin.now.sh/api/actors/${path}`;
 
 export const create = data => {
   return fetch(baseUrl(), {

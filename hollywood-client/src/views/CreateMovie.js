@@ -1,14 +1,18 @@
 import React, { Component } from "react";
 import api from "../api";
-
+import { Link } from "react-router-dom";
+//import all files
 class CreateMovie extends Component {
   constructor() {
     super();
 
     this.state = {
-      movie: {}
+      movie: {
+        rating: "G"
+      }
     };
   }
+  //setting the state
   formSubmit = submitE => {
     let { movie } = this.state;
     submitE.preventDefault();
@@ -17,9 +21,10 @@ class CreateMovie extends Component {
       this.props.history.push("/movies");
     });
   };
-
+  //creating a movie on submit
   inputChange = changeE => {
     changeE.persist();
+
     let name = changeE.target.name;
     let value = changeE.target.value;
 
@@ -32,11 +37,30 @@ class CreateMovie extends Component {
       };
     });
   };
-
+  //using the value of inputs
   render() {
+    let { movie } = this.state;
     return (
-      <div>
+      <div
+        style={{
+          background:
+            'url("http://www.pptbackgrounds.org/uploads/film-movies-movie-making-minimalism-creative-backgrounds-wallpapers.jpg")',
+
+          backgroundSize: "contain",
+          backgroundRepeat: "no-repeat",
+          backgroundPosition: "center",
+          backgroundColor: "black",
+          minHeight: "100vh",
+          display: "flex",
+          flexDirection: "column",
+          textAlign: "center",
+          justifyContent: "center"
+        }}
+      >
         <h1>Create Movie</h1>
+        <Link to={"/movies"} style={{ fontSize: 30, color: "black" }}>
+          Back
+        </Link>
         <form onSubmit={this.formSubmit}>
           <input
             type="text"
@@ -44,12 +68,19 @@ class CreateMovie extends Component {
             placeholder={"title"}
             onChange={this.inputChange}
           />
-          <input
-            type="text"
-            name={"rating"}
-            placeholder={"rating"}
+          <select
+            value={movie.rating}
+            name="rating"
+            required
             onChange={this.inputChange}
-          />
+          >
+            <option value="G">G</option>
+            <option value="PG">PG</option>
+            <option value="PG-13">PG-13</option>
+            <option value="R">R</option>
+            <option value="NC-17">NC-17</option>
+            <option value="NR">NR</option>
+          </select>
           <input
             min={0}
             max={100}
@@ -68,6 +99,12 @@ class CreateMovie extends Component {
             type="text"
             name={"summary"}
             placeholder={"summary"}
+            onChange={this.inputChange}
+          />
+          <input
+            type="text"
+            name={"genre"}
+            placeholder={"genre"}
             onChange={this.inputChange}
           />
           <input type="submit" />

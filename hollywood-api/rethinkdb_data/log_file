@@ -44,3 +44,21 @@
 2017-11-01T13:18:42.349993000 7960.120892s info: Table 3d57562a-b011-446c-98fc-f57e89fe7d97: This server is Raft leader for term 1. Latest log index is 0.
 2017-11-01T13:18:43.221822000 7960.992677s info: Table 3d57562a-b011-446c-98fc-f57e89fe7d97: Configuration is changing.
 2017-11-01T13:18:43.222404000 7960.993260s info: Table 3d57562a-b011-446c-98fc-f57e89fe7d97: Configuration is changing.
+2017-11-02T08:08:38.262911000 0.032839s notice: Running rethinkdb 2.3.6 (CLANG 8.1.0 (clang-802.0.42))...
+2017-11-02T08:08:38.267580000 0.037503s notice: Running on Darwin 16.7.0 x86_64
+2017-11-02T08:08:38.267623000 0.037545s notice: Loading data from directory /Users/calvinhobbes/Documents/Devtree/week8/day3/hollywood-app/hollywood-api/rethinkdb_data
+2017-11-02T08:08:38.310253000 0.080175s info: Automatically using cache size of 3550 MB
+2017-11-02T08:08:38.311013000 0.080935s notice: Listening for intracluster connections on port 29015
+2017-11-02T08:08:38.371667000 0.141589s notice: Listening for client driver connections on port 28015
+2017-11-02T08:08:38.371916000 0.141838s notice: Listening for administrative HTTP connections on port 8080
+2017-11-02T08:08:38.371921000 0.141842s notice: Listening on cluster addresses: 127.0.0.1, ::1
+2017-11-02T08:08:38.371923000 0.141844s notice: Listening on driver addresses: 127.0.0.1, ::1
+2017-11-02T08:08:38.371951000 0.141872s notice: Listening on http addresses: 127.0.0.1, ::1
+2017-11-02T08:08:38.371953000 0.141874s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2017-11-02T08:08:38.371955000 0.141876s notice: Server ready, "calvins_air_lan_kf0" c61d232d-d410-4930-974d-a064a3ac1e3e
+2017-11-02T08:08:39.793616000 1.563494s info: Table ad35eec1-c6de-4164-98fd-c9a4169c9b34: Starting a new Raft election for term 2.
+2017-11-02T08:08:39.819335000 1.589213s info: Table ad35eec1-c6de-4164-98fd-c9a4169c9b34: This server is Raft leader for term 2. Latest log index is 3.
+2017-11-02T08:08:40.016701000 1.786579s info: Table ae7559f3-44ba-41c0-b6e9-9dc852242c10: Starting a new Raft election for term 2.
+2017-11-02T08:08:40.042264000 1.812142s info: Table ae7559f3-44ba-41c0-b6e9-9dc852242c10: This server is Raft leader for term 2. Latest log index is 3.
+2017-11-02T08:08:40.164260000 1.934138s info: Table 3d57562a-b011-446c-98fc-f57e89fe7d97: Starting a new Raft election for term 2.
+2017-11-02T08:08:40.220129000 1.989963s info: Table 3d57562a-b011-446c-98fc-f57e89fe7d97: This server is Raft leader for term 2. Latest log index is 5.

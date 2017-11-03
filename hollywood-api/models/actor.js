@@ -6,7 +6,13 @@ module.exports = db => {
     gender: type
       .string()
       .enum(["male", "female", "it"])
-      .required()
+      .required(),
+    race: type
+      .string()
+      .enum(["white", "black", "brown", "yellow", "other"])
+      .required(),
+    topMovies: type.string().required(),
+    picture: type.string().required()
   });
   return Actor;
 };

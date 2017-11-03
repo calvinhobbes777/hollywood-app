@@ -6,13 +6,14 @@ module.exports = db => {
     poster: type.string().required(),
     rating: type
       .string()
-      .enum(["G", "PG", "PG13", "R", "NC-17", "NR"])
+      .enum(["G", "PG", "PG-13", "R", "NC-17", "NR"])
       .required(),
     rottenTomatoes: type
       .number()
       .min(0)
       .max(100)
-      .required()
+      .required(),
+    genre: type.string().required()
   });
   return Movie;
 };

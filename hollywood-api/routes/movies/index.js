@@ -7,3 +7,4 @@ module.exports = [
   require("./addActor"),
   require("./removeActor")
 ];
+//exporting all the modules
